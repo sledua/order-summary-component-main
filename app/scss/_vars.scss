@@ -1,6 +1,13 @@
-$openSans-Regular: "OpenSans-Regular", sans-serif;
+$redHatDisplay-Medium: "RedHatDisplay-Medium", sans-serif;
+$redHatDisplay-Bold: "RedHatDisplay-Bold", sans-serif;
+$redHatDisplay-Black: "RedHatDisplay-Black", sans-serif;
 
 $base_size: 10px;
 
-$accent: 148, 41, 17;
+$accent: rgb(148, 41, 17);
 $white: white;
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darcBlue: hsl(223, 47%, 23%);

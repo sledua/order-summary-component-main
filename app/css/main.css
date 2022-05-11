@@ -1,0 +1,118 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+body, h1, h2, h3, p, figure, picture {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "RedHatDisplay-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "RedHatDisplay-Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "RedHatDisplay-Black";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/RedHatDisplay/RedHatDisplay-Black.ttf") format("ttf");
+}
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: rgb(148, 41, 17);
+  color: white;
+}
+
+:focus-visible {
+  outline-offset: 0;
+  outline: none;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: hsl(225deg, 100%, 94%);
+  color: hsl(223deg, 47%, 23%);
+  font-family: "RedHatDisplay-Medium", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1 {
+  font-family: "RedHatDisplay-Black", sans-serif;
+  font-weight: 900;
+}
+
+.display {
+  font-family: "RedHatDisplay-Bold", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: bold;
+}
+
+span {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 45rem;
+  height: 70rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  border: 1px solid #333;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+}
+.card-head {
+  overflow: hidden;
+}
+.card-head img {
+  border-start-start-radius: 1rem;
+  border-start-end-radius: 1rem;
+}
+.card-title {
+  text-align: center;
+}

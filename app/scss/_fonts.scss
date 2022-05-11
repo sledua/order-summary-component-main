@@ -6,4 +6,6 @@
 		src: url($furl) format('ttf');
 	}
 }
-@include font("OpenSans-Regular", normal, 400, "../fonts/OpenSans/OpenSans-Regular.ttf");
+@include font("RedHatDisplay-Medium", normal, 400, "../fonts/RedHatDisplay/RedHatDisplay-Medium.ttf");
+@include font("RedHatDisplay-Bold", normal, 400, "../fonts/RedHatDisplay/RedHatDisplay-Bold.ttf");
+@include font("RedHatDisplay-Black", normal, 400, "../fonts/RedHatDisplay/RedHatDisplay-Black.ttf");
