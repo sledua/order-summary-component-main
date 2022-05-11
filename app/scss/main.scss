@@ -1,0 +1,38 @@
+@use "sass:list";
+@use "sass:math";
+@import "normalize";
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+::selection {
+	background-color: rgb($accent);
+	color: $white;
+}
+:focus-visible {
+	outline-offset: 0;
+	outline: none;
+}
+:root {
+	font-size: $base_size;
+}
+
+body {
+	font-size: 1.4rem;
+	color: $white;
+	font-family: $openSans-Regular;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.grid {
+	display: grid;
+}
+.flex {
+	display: flex;
+}
+
+@import "media";
