@@ -42,6 +42,9 @@ p {
 a {
 	color: $brightBlue;
 	font-weight: bold;
+	&:hover {
+		color: $activeBlue;
+	}
 }
 span {
 	display: block;
@@ -49,6 +52,9 @@ span {
 button {
 	font-family: $redHatDisplay-Bold;
 	font-weight: 700;
+	&:hover {
+		cursor: pointer;
+	}
 }
 .grid {
 	display: grid;
@@ -59,13 +65,27 @@ button {
 .container {
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	&::after {
+		content: '';
+		background-image: url(../img/pattern-background-desktop.svg);
+		background-size: contain;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 310px;
+		width: 100%;
+		transform: rotate(180deg);
+		z-index: 5;
+	}
 }
 .wrapper {
+	position: relative;
 	width: 45rem;
 	height: 70rem;
-	
 	margin-top: 5rem;
 	margin-bottom: 5rem;
+	z-index: 10;
 }
 .card {
 	border: 1px solid transparent;
@@ -107,6 +127,10 @@ button {
 				color: $white;
 				border-color: transparent;
 				box-shadow: 0px 4px 15px -5px $brightBlue;
+				&:hover {
+					background-color: $activeBlue;
+					box-shadow: 0px 4px 15px -5px $activeBlue;
+				}
 			}
 			.cancel {
 				margin-top: 2rem;
@@ -116,6 +140,9 @@ button {
 				background-color: transparent;
 				padding: 0;
 				color: $desaturatedBlue;
+				&:hover {
+					color: $darcBlue;
+				}
 			}
 		}
 		.item {
@@ -134,5 +161,9 @@ button {
 			}
 		}
 	}
+}
+.attribution {
+	position: relative;
+	z-index: 6;
 }
 @import "media";

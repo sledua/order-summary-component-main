@@ -1,8 +1,52 @@
 @import "vars";
 
 @media (max-width: 130rem) {
-
 }
 @media (max-width: 37rem) {
-	
+	.wrapper {
+		position: relative;
+		width: 25rem;
+		height: 45rem;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		z-index: 10;
+	}
+	.container {
+		&::after {
+			content: "";
+			background-image: url(../img/pattern-background-mobile.svg);
+			background-size: cover;
+			height: 194px;
+		}
+	}
+	.card-title {
+		padding: 2rem 0;
+		p {
+			padding: 0 1rem;
+			font-size: 1.4rem;
+		}
+		h1 {
+			font-size: 1.7rem;
+			padding-bottom: 1rem;
+		}
+	}
+	a {
+		font-size: 1.4rem;
+	}
+	.card-navigatin {
+		.item {
+			margin: 0 1rem;
+			padding: 1rem 0;
+		}
+		.card-buttons {
+			margin: 0 1rem;
+			padding-top: 2rem;
+		}
+		.item-info {
+			margin-right: 1rem;
+			.display {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
