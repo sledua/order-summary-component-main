@@ -71,9 +71,20 @@ a {
   color: hsl(245deg, 75%, 52%);
   font-weight: bold;
 }
+a:hover {
+  color: hsl(245deg, 55%, 53%);
+}
 
 span {
   display: block;
+}
+
+button {
+  font-family: "RedHatDisplay-Bold", sans-serif;
+  font-weight: 700;
+}
+button:hover {
+  cursor: pointer;
 }
 
 .grid {
@@ -87,22 +98,36 @@ span {
 .container {
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.container::after {
+  content: "";
+  background-image: url(../img/pattern-background-desktop.svg);
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 310px;
+  width: 100%;
+  transform: rotate(180deg);
+  z-index: 5;
 }
 
 .wrapper {
+  position: relative;
   width: 45rem;
   height: 70rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  z-index: 10;
 }
 
 .card {
-  border: 1px solid #333;
+  border: 1px solid transparent;
   border-radius: 1rem;
   height: 100%;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   background-color: white;
 }
@@ -115,4 +140,114 @@ span {
 }
 .card-title {
   text-align: center;
+  padding: 5rem 0;
+}
+.card-title h1 {
+  padding-bottom: 2rem;
+}
+.card-title p {
+  line-height: 1.6;
+  padding: 0 6rem;
+  color: hsl(224deg, 23%, 55%);
+}
+.card-navigatin {
+  width: 100%;
+}
+.card-navigatin .card-buttons {
+  margin: 0 6rem;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+.card-navigatin .card-buttons .btn {
+  padding: 1rem 0;
+  border-radius: 1rem;
+  background-color: hsl(245deg, 75%, 52%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0px 4px 15px -5px hsl(245deg, 75%, 52%);
+}
+.card-navigatin .card-buttons .btn:hover {
+  background-color: hsl(245deg, 55%, 53%);
+  box-shadow: 0px 4px 15px -5px hsl(245deg, 55%, 53%);
+}
+.card-navigatin .card-buttons .cancel {
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0;
+  color: hsl(224deg, 23%, 55%);
+}
+.card-navigatin .card-buttons .cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+.card-navigatin .item {
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: hsl(225deg, 100%, 98%);
+  margin: 0 6rem;
+  padding: 2rem 0;
+  border-radius: 1rem;
+}
+.card-navigatin .item-info {
+  margin-right: 7rem;
+}
+.card-navigatin .item-info .price {
+  color: hsl(224deg, 23%, 55%);
+  padding-top: 0.7rem;
+}
+
+.attribution {
+  position: relative;
+  z-index: 6;
+}
+
+@media (max-width: 37rem) {
+  .wrapper {
+    position: relative;
+    width: 25rem;
+    height: 45rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    z-index: 10;
+  }
+
+  .container::after {
+    content: "";
+    background-image: url(../img/pattern-background-mobile.svg);
+    background-size: cover;
+    height: 194px;
+  }
+
+  .card-title {
+    padding: 2rem 0;
+  }
+  .card-title p {
+    padding: 0 1rem;
+    font-size: 1.4rem;
+  }
+  .card-title h1 {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+  }
+
+  a {
+    font-size: 1.4rem;
+  }
+
+  .card-navigatin .item {
+    margin: 0 1rem;
+    padding: 1rem 0;
+  }
+  .card-navigatin .card-buttons {
+    margin: 0 1rem;
+    padding-top: 2rem;
+  }
+  .card-navigatin .item-info {
+    margin-right: 1rem;
+  }
+  .card-navigatin .item-info .display {
+    font-size: 1.4rem;
+  }
 }
